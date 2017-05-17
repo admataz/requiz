@@ -8,6 +8,7 @@
     "dev:server": "nodemon ./server --inspect",
     "start": "npm-run-all  -p dev:*",
     "build": "webpack -p --progress --config ./webpack.production.config.js",
+    "flow": "flow",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -29,6 +30,7 @@
     "eslint": "^3.19.0",
     "express": "^4.15.2",
     "extract-text-webpack-plugin": "^2.1.0",
+    "flow-bin": "^0.46.0",
     "html-loader": "^0.4.5",
     "node-sass": "^4.5.2",
     "nodemon": "^1.11.0",
@@ -43,6 +45,7 @@
     "d3": "^4.8.0",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.4",
+    "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.4",
@@ -51,6 +54,7 @@
   },
   "babel": {
     "presets": [
+      "flow",
       "es2015",
       "react"
     ]

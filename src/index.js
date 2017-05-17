@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {
   render
@@ -71,8 +72,6 @@ function init(endpoint, el, o, cb) {
   
 
 }
-
-
 
 /**
  * exporting using ES6 modules means this will be available as an object in the UMD export

@@ -1,5 +1,6 @@
-import React from 'react'
-
+import React from 'react';
+import PropTypes from 'prop-types';
+import Quiz from './containers/Quiz';
 
 class App extends React.Component{
 
@@ -7,7 +8,7 @@ class App extends React.Component{
 
       return (
         <div className="app-main">
-        Here is the app
+            <Quiz/>
         </div>
       )
   }
