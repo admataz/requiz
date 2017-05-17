@@ -38,14 +38,21 @@ module.exports = {
   },
   devServer: {
     contentBase: './dist',
-    hot: true
+    hot: true,
+    proxy: {
+      "/api": "http://localhost:3000"
+    }
   },
   plugins: [
     new CopyWebpackPlugin([{
       from: `${__dirname}/src/html/*.html`,
       to: `${__dirname}/dist`,
       flatten: true
-    }, ]),
+    },{
+      from: `${__dirname}/src/data/*.json`,
+      to: `${__dirname}/dist/data`,
+      flatten: true
+    } ]),
     new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',
         minChunks: function (module) {

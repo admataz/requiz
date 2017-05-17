@@ -1,5 +1,3 @@
-const store = require('../config');
-
 import fetch from 'isomorphic-fetch';
 
 const REQUEST_CONTENT = 'REQUEST_CONTENT';

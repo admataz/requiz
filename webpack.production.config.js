@@ -40,7 +40,11 @@ module.exports = {
       from: `${__dirname}/src/html/*.html`,
       to: `${__dirname}/dist`,
       flatten: true
-    }, ]),
+    },{
+      from: `${__dirname}/src/data/*.json`,
+      to: `${__dirname}/dist/data`,
+      flatten: true
+    }  ]),
     new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',
         minChunks: function (module) {
