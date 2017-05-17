@@ -1,0 +1,4 @@
+const defaultReadmore = {
+  title: '',
+  url: ''
+};
