@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import renderHTML from 'react-render-html';
 import answerInput from './AnswerInput';
 import questionAnswer from './QuestionAnswer'
 
@@ -13,7 +14,7 @@ const Question  = ({showAnswer, questionData}) => {
         }
 
         <div className="ac-quiz-question-question">
-            <span className="ac-quiz-question-text">{questionData.question}</span>
+            <span className="ac-quiz-question-text">{renderHTML(questionData.question)}</span>
         </div>
 
 

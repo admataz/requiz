@@ -1,17 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Question from '../components/Question';
 
+
 const mapStateToProps = (state, ownprops) => {
-  console.log(ownprops);
-  return {questionData: state.content.questions[0]};
+  return {
+    questionData: state.content.questions[state.appState.currentQuestionIndex]
+  };
 }
 
 const mapDispatchToProps = (dispatch) => {
-
-return {};
-
+  return {};
 }
 
 
@@ -20,9 +19,5 @@ const Quiz = connect(
   mapDispatchToProps
 )(Question);
 
-
-Quiz.propTypes = {
-  // testProp: PropTypes.number,
-}
 
 export default Quiz;

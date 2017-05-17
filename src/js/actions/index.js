@@ -6,7 +6,8 @@ const CONTENT_LOADED = 'CONTENT_LOADED';
 const QUIZ_CONTENT_LOADED = 'QUIZ_CONTENT_LOADED';
 const CONFIG_LOADED = 'CONFIG_LOADED';
 const RESET_USER_ANSWERS = 'RESET_USER_ANSWERS';
-const SET_CURRENT_QUESTION_ID = 'SET_CURRENT_QUESTION_ID';
+const SET_CURRENT_QUESTION = 'SET_CURRENT_QUESTION';
+const SET_CURRENT_APPVIEW = 'SET_CURRENT_APPVIEW';
 const SET_USER_ANSWER = 'SET_USER_ANSWER';
 const ADMIN_UPDATE_QUESTION_IMAGE = 'ADMIN_UPDATE_QUESTION_IMAGE';
 
@@ -122,9 +123,16 @@ export const resetUserAnswers = () => {
   };
 };
 
-export const setCurrentQuestionId = (id) => {
+export const setCurrentQuestion = (id) => {
   return {
-    type: SET_CURRENT_QUESTION_ID,
+    type: SET_CURRENT_QUESTION,
+    index: id
+  };
+};
+
+export const setCurrentAppview = (id) => {
+  return {
+    type: SET_CURRENT_APPVIEW,
     id: id
   };
 };
